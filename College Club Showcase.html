@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHARUSAT | College Club Showcase</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  background-color: #f7f7fb;
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e2a4a;
+  padding: 18px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #dcdfe8;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffb347;
+  border-bottom: 2px solid #ffb347;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #1e2a4a 0%, #35507a 100%);
+  color: #ffffff;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #d6dcec;
+}
+
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 50px 0 30px;
+  color: #1e2a4a;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #ffb347;
+  margin: 10px auto 0;
+}
+
+.clubs-section {
+  padding: 20px 40px 60px;
+}
+
+.club-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.club-card {
+  background-color: #ffffff;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #e0e0e6;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.club-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.club-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.club-card h3 {
+  color: #1e2a4a;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.club-card p {
+  font-size: 0.95rem;
+  color: #555;
+  min-height: 70px;
+}
+
+.details-btn {
+  margin-top: 15px;
+  padding: 10px 22px;
+  background-color: #1e2a4a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-btn:hover {
+  background-color: #ffb347;
+  color: #1e2a4a;
+  transform: scale(1.05);
+}
+
+
+.gallery-section {
+  padding: 20px 40px 60px;
+  background-color: #eef0f7;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-container img {
+  width: 280px;
+  height: 190px;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
+
+.main-footer {
+  text-align: center;
+  background-color: #1e2a4a;
+  color: #dcdfe8;
+  padding: 25px 20px;
+  font-size: 0.95rem;
+}
+
+.main-footer p {
+  margin: 3px 0;
+}
+
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .club-container,
+  .gallery-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER & NAVIGATION ===== -->
+  <header class="main-header">
+    <div class="logo">CHARUSAT</div>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#clubs">Clubs</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HOME / HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <h1>Welcome to CHARUSAT Club Activities</h1>
+    <p>Explore, Learn and Grow with our Student Clubs</p>
+  </section>
+
+  <!-- ===== CLUB INFORMATION SECTION ===== -->
+  <section id="clubs" class="clubs-section">
+    <h2 class="section-title">Our Clubs</h2>
+
+    <div class="club-container">
+
+      <!-- Technical Club Card -->
+      <div class="club-card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop" alt="Technical Club">
+        <h3>Technical Club</h3>
+        <p>A place for tech enthusiasts to build projects, attend workshops and explore new technologies together.</p>
+        <button class="details-btn">View Details</button>
+      </div>
+
+      <!-- Coding Club Card -->
+      <div class="club-card">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop" alt="Coding Club">
+        <h3>Coding Club</h3>
+        <p>Sharpen your programming skills through hackathons, coding contests and peer-to-peer learning sessions.</p>
+        <button class="details-btn">View Details</button>
+      </div>
+
+      <!-- Robotics Club Card -->
+      <div class="club-card">
+        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop" alt="Robotics Club">
+        <h3>Robotics Club</h3>
+        <p>Design, build and program robots while competing in inter-college robotics events and challenges.</p>
+        <button class="details-btn">View Details</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CLUB GALLERY SECTION ===== -->
+  <section id="gallery" class="gallery-section">
+    <h2 class="section-title">Club Gallery</h2>
+
+    <div class="gallery-container">
+      <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=350&h=250&fit=crop" alt="Club Activity 1">
+      <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=350&h=250&fit=crop" alt="Club Activity 2">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=350&h=250&fit=crop" alt="Club Activity 3">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=350&h=250&fit=crop" alt="Club Activity 4">
+    </div>
+  </section>
+
+  <!-- ===== FOOTER / CONTACT SECTION ===== -->
+  <footer id="contact" class="main-footer">
+    <p>CHARUSAT, Anand</p>
+    <p>College Club Activities &ndash; 2026</p>
+  </footer>
+
+</body>
+</html>
